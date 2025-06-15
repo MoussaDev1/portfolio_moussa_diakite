@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+$font-title: "Telex", sans-serif;
+$font-text: "Telex", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Telex&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(300, 15%, 6%);
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: hsl(292, 80%, 24%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  color: hsl(300, 59%, 16%);
+}
