@@ -1,5 +1,17 @@
-<section class="section skills">
+<section class="section-skills">
   <div class="container">
     <h2>Compétences</h2>
+    <div class="skills-grid">
+      @for (skill of skills; track skill.type) {
+      <div class="skill-category">
+        <h3>{{ skill.type }}</h3>
+        <div class="skill-list">
+          @for (item of skill.known; track item) {
+          <span class="skill-tag">{{ item }}</span>
+          }
+        </div>
+      </div>
+      }
+    </div>
   </div>
 </section>

@@ -1,1 +1,27 @@
-<p>project-preview works!</p>
+<section class="section-project">
+  <div class="container">
+    <h2>Projets</h2>
+
+    <div class="project-grid">
+      @for (project of projects; track project.name) {
+      <div class="project-card">
+        <img
+          [src]="project.image"
+          alt="{{ project.name }}"
+          class="project-image"
+        />
+        <h3 class="project-title">{{ project.name }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+        <a [href]="project.github" target="_blank" class="project-link"
+          >Voir le github</a
+        >
+        <div>
+          @for (item of project.technologies; track item) {
+          <span class="project-tag">{{ item }}</span>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

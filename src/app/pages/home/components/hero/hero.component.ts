@@ -4,6 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 export interface ContactLink {
   icon: IconDefinition;
   label: string;

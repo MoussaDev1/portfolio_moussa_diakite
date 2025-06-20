@@ -1,0 +1,186 @@
+// =============================================================================
+// PROJECTS COMPONENT - Style cohérent avec Hero
+// =============================================================================
+
+.section-project {
+  min-height: 100vh;
+  padding: 4rem 0;
+
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+
+    @media (max-width: 768px) {
+      padding: 0 1rem;
+    }
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: inherit;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .project-card {
+    background-color: hsl(300, 33%, 12%);
+    border: 2px solid hsl(294, 31%, 36%);
+    border-radius: 8px;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      background-color: hsl(297, 42%, 20%);
+      border-color: hsl(292, 30%, 47%);
+      transform: translateY(-2px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: all 0.3s ease-in-out;
+
+      @media (max-width: 768px) {
+        height: 180px;
+      }
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      margin: 1.5rem 2rem 1rem 2rem;
+      color: hsl(292, 79%, 77%);
+
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+        margin: 1rem 1.5rem 0.75rem 1.5rem;
+      }
+    }
+
+    .project-description {
+      margin: 0 2rem 1.5rem 2rem;
+      line-height: 1.6;
+      color: inherit;
+      flex-grow: 1;
+
+      @media (max-width: 768px) {
+        margin: 0 1.5rem 1rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem;
+      margin: 0 2rem 1.5rem 2rem;
+      background-color: hsl(300, 33%, 12%);
+      border: 2px solid hsl(294, 31%, 36%);
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease-in-out;
+      box-shadow: none;
+      text-align: center;
+      justify-content: center;
+      font-weight: 500;
+
+      &:hover {
+        background-color: hsl(297, 42%, 20%);
+        color: hsl(292, 79%, 77%);
+        border-color: hsl(292, 30%, 47%);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        margin: 0 1.5rem 1rem 1.5rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    // Container des tags technologies
+    div:last-child {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 2rem 2rem 2rem;
+
+      @media (max-width: 768px) {
+        margin: 0 1.5rem 1.5rem 1.5rem;
+        gap: 0.4rem;
+      }
+    }
+
+    .project-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background-color: hsl(300, 33%, 12%);
+      border: 2px solid hsl(294, 31%, 36%);
+      border-radius: 8px;
+      color: inherit;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      box-shadow: none;
+      cursor: default;
+
+      &:hover {
+        background-color: hsl(297, 42%, 20%);
+        color: hsl(292, 79%, 77%);
+        border-color: hsl(292, 30%, 47%);
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 768px) {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  // Responsive pour mobile
+  @media (max-width: 768px) {
+    padding: 3rem 0;
+    min-height: auto;
+  }
+}
+
+// Animation au hover de l'image
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
