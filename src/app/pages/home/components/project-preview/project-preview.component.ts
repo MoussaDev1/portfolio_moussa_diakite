@@ -20,14 +20,14 @@ export class ProjectPreviewComponent {
       image: 'assets/images/exosaver_img.png',
       name: 'ExoSaver',
       description: 'Application web pour arranger les ses apprentissage.',
-      technologies: ['Angular', 'TypeScript', 'SCSS', 'Spring Boot'],
+      technologies: ['Angular', 'TypeScript', 'SCSS', 'Spring Boot', 'Java'],
       github: 'https://github.com/MoussaDev1/exosaver_project',
     },
     {
       image: 'assets/images/manga_img.png',
       name: 'Mangax',
       description: "Application web de notation d'oeuvre type manga/animé.",
-      technologies: ['PHP', 'Scss', 'Javascript'],
+      technologies: ['PHP (Vanilla)', 'SCSS', 'JavaScript', 'MySQL'],
       github: 'https://github.com/MoussaDev1/Mangax',
     },
     {
